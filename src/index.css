@@ -1,1 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@100;200;300;400;500;600;700&display=swap");
 @import "tailwindcss";
+
+:root {
+    --main_background: #ffff;
+    --dark_color: #292830;
+    --light_color: #bdbdbd;
+    --mian_color: #ff7235
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--main_color);
+}
+
+@theme {
+    --color-main_background: var(--main_background);
+    --color-dark_color: var(--dark_color);
+    --color-light_color: var(--light_color);
+    --color-mian_color: var(--mian_color)
+}
+
+.container {
+    max-width: 1240px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
