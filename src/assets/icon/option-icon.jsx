@@ -1,0 +1,13 @@
+import React from 'react'
+
+export const OptionIcon = () => {
+    return (
+        <div>
+            <span>
+                <svg width={8} height={5} viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 0.5L4 4L0.5 0.5" stroke="#666666" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            </span>
+        </div>
+    )
+}
