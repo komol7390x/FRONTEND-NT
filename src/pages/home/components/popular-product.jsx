@@ -31,7 +31,7 @@ export const PopularProduct = () => {
             <div className=' grid grid-cols-6 gap-2'>
                 {loading ? <div>LOADING ...</div> : ''}
                 {data.map((item) => (
-                    <div className='border relative hover:shadow-[0_0_12px_0_rgba(32,181,38,0.32)] border-soft-grey hover:border-primary-normal-gray transition-all duration-300 p-1 rounded-[5px]'>
+                    <div className='border relative hover:shadow-[0_0_12px_0_rgba(32,181,38,0.32)] hover:scale-104 border-soft-grey hover:border-primary-normal-gray transition-all duration-400 p-1 rounded-[5px]'>
 
                         <div>
                             <p className={`${item.userId < 150 ? 'hidden' : ''}

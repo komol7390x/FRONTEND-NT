@@ -37,7 +37,7 @@ export const LeftBanner = ({ days = '' }) => {
     return (
         <div>
             {/* left */}
-            <div className=' relative'>
+            <div className='relative'>
                 <img src={left} alt="left" />
                 <div className='absolute top-0 w-full text-center mt-6'>
                     {/* info */}
@@ -48,7 +48,7 @@ export const LeftBanner = ({ days = '' }) => {
 
                     {/* TIME */}
                     <div className=''>
-                        <div className="flex gap-4 text-xl font-bold px-[77px]">
+                        <div className="flex gap-4 justify-center font-bold">
 
                             <div className='text-[24px] font-normal text-white'>
                                 <p>{timeLeft.days.toString().padStart(2, '0')}</p>
