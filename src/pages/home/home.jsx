@@ -1,7 +1,8 @@
-
-
 import { Banner } from './components/banner';
+import { Categories } from './components/categories';
 import { Hero } from './components/hero';
+import { PopularProduct } from './components/popular-product';
+import { Sale } from './components/sale';
 
 
 const Home = () => {
@@ -14,6 +15,15 @@ const Home = () => {
 
         {/* hero */}
         <Hero />
+
+        {/* Popular-categories */}
+        <Categories />
+
+        {/* Popular-categories */}
+        <PopularProduct />
+
+        {/* Sale */}
+        <Sale />
       </div>
     </main>
   );

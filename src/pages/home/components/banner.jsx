@@ -9,7 +9,7 @@ export const Banner = () => {
     return (
         <>
             {/* banner */}
-            <div className='flex justify-between mb-6'>
+            <div className='flex justify-between mb-6 gap-4'>
 
                 {/* left-banner */}
                 <div className='relative'>
