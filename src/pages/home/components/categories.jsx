@@ -30,7 +30,7 @@ export const Categories = () => {
                         <div
                             key={item.id}
                             className="pt-4 px-1 border rounded-[5px] hover:scale-110  hover:shadow-[0_0_12px_0_rgba(32,181,38,0.32)] border-soft-grey
-                             hover:border-primary-normal-gray transition-all duration-500 text-center hover:text-primary-normal-gray cursor-pointer"
+                             hover:border-soft-grey transition-all duration-500 text-center hover:text-primary-normal-gray cursor-pointer"
                         >
                             <img
                                 src={item.image}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ShowButton } from "../../../../assets/icon/show-button";
 import left from '../../../../assets/png/fruit.png'
+import { Link } from "react-router-dom";
 
 
 export const LeftBanner = ({ days = '' }) => {
@@ -37,7 +38,7 @@ export const LeftBanner = ({ days = '' }) => {
     return (
         <div>
             {/* left */}
-            <div className='relative'>
+            <div className='relative hover:scale-105 transition-all  duration-500'>
                 <img src={left} alt="left" />
                 <div className='absolute top-0 w-full text-center mt-6'>
                     {/* info */}
@@ -78,7 +79,7 @@ export const LeftBanner = ({ days = '' }) => {
 
                         </div>
                     </div>
-                    <ShowButton bg='white' />
+                    <Link to={`product/${1}`}><ShowButton bg='white' /></Link>
                 </div>
             </div>
         </div>
