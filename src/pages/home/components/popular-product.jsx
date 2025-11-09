@@ -32,7 +32,7 @@ export const PopularProduct = () => {
                 {loading ? <div>LOADING ...</div> : ''}
                 {data.map((item) => (
                     <Link to={`product/${item.id}`}>
-                        <div className='border relative hover:shadow-[0_0_12px_0_rgba(32,181,38,0.32)] hover:scale-104 border-soft-grey hover:border-soft-grey transition-all duration-400 p-1 rounded-[5px]'>
+                        <div className='border relative hover:shadow-[0_0_12px_0_rgba(32,181,38,0.32)] hover:scale-104 border-soft-grey hover:border-soft-grey transition-all duration-500 p-1 rounded-[5px]'>
 
                             <div>
                                 <p className={`${item.userId < 150 ? 'hidden' : ''}
@@ -40,12 +40,13 @@ export const PopularProduct = () => {
                                   text-white rounded-sm ml-1 text-[14px] font-normal absolute`}>SALE 20%</p>
                             </div>
 
-                            <div className="absolute right-0 mr-2 mt-2">
-                                <img
-                                    src={Eyes}
-                                    alt="eyes"
-                                    className="bg-white p-2 rounded-full size-8"
-                                />
+                            <div className="absolute right-0 mr-2 mt-2 ">
+                                <div className="bg-white p-1.5  rounded-full transition-colors">
+                                    <img
+                                        src={Eyes}
+                                        alt="eyes"
+                                    />
+                                </div>
                                 <img
                                     src={Heart}
                                     alt="heart"
@@ -84,7 +85,7 @@ export const PopularProduct = () => {
                                 </div>
 
                                 {/* Bags */}
-                                <div className='mt-6'>
+                                <div className='mt-6 text-black hover:bg-primary-normal-gray hover:text-white  bg-[#F2F2F2] items-center justify-center p-1.5 rounded-full'>
                                     <Bags />
                                 </div>
                             </div>

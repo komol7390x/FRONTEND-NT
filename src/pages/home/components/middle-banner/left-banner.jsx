@@ -5,23 +5,25 @@ import { Link } from "react-router-dom";
 
 
 export const LeftBanner = ({ days = '' }) => {
-    const [timeLeft, setTimeLeft] = useState({
-        days,
-        hours: 0,
-        minutes: 0,
-        seconds: 0,
-    });
+    const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
-        const endTime = new Date().getTime() + Number(days) * 24 * 60 * 60 * 1000;
+        let savedEndTime = localStorage.getItem("saveTime");
+
+        if (!savedEndTime) {
+            const endTime = new Date().getTime() + Number(days) * 24 * 60 * 60 * 1000;
+            localStorage.setItem("saveTime", endTime);
+            savedEndTime = endTime;
+        }
 
         const interval = setInterval(() => {
             const now = new Date().getTime();
-            const distance = endTime - now;
+            const distance = savedEndTime - now;
 
             if (distance <= 0) {
                 clearInterval(interval);
                 setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+                localStorage.removeItem("saveTime");
                 return;
             }
 
@@ -35,12 +37,14 @@ export const LeftBanner = ({ days = '' }) => {
 
         return () => clearInterval(interval);
     }, [days]);
+
     return (
         <div>
             {/* left */}
-            <div className='relative hover:scale-105 transition-all  duration-500'>
-                <img src={left} alt="left" />
-                <div className='absolute top-0 w-full text-center mt-6'>
+            <div className='hover:scale-105 transition-all  duration-500'>
+                <div className="relative w-[424px] h-[536px] bg-cover bg-center" style={{ backgroundImage: `url('${left}')` }}>
+
+                <div className='relativetop-0 w-full text-center pt-8'>
                     {/* info */}
                     <div className=''>
                         <h3 className='text-[14px] text-white font-medium uppercase'>Best Deals</h3>
@@ -80,6 +84,7 @@ export const LeftBanner = ({ days = '' }) => {
                         </div>
                     </div>
                     <Link to={`product/${1}`}><ShowButton bg='white' /></Link>
+                </div>
                 </div>
             </div>
         </div>

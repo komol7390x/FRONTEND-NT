@@ -2,11 +2,20 @@ import React from 'react'
 
 export const Bags = () => {
     return (
-        <div>
-            <svg width={40} height={40} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx={20} cy={20} r={20} fill="#F2F2F2" />
-                <path d="M16.6667 18.3333H14.1667L12.5 27.5H27.5L25.8333 18.3333H23.3333M16.6667 18.3333V15.8333C16.6667 13.9924 18.1591 12.5 20 12.5C21.8409 12.5 23.3333 13.9924 23.3333 15.8333V18.3333M16.6667 18.3333H23.3333M16.6667 18.3333V20.8333M23.3333 18.3333V20.8333" stroke="#1A1A1A" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-        </div>
+        <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M4.81669 6.48336H2.31669L0.650024 15.65H15.65L13.9834 6.48336H11.4834M4.81669 6.48336V3.98336C4.81669 2.14241 6.30907 0.650024 8.15002 0.650024C9.99097 0.650024 11.4834 2.14241 11.4834 3.98336V6.48336M4.81669 6.48336H11.4834M4.81669 6.48336V8.98336M11.4834 6.48336V8.98336"
+                stroke="currentColor"
+                strokeWidth="1.3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
     )
 }
