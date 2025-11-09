@@ -23,5 +23,6 @@ export const Sale = () => {
                 </div>
             </div>
         </div>
+        
     )
 }
